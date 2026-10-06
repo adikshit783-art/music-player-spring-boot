@@ -57,17 +57,29 @@ The frontend uses HTML, CSS, and JavaScript to communicate with the backend APIs
 ## 🏗️ Project Architecture
 
 ```text
-Frontend
-   │
-   │ HTTP Requests
-   ▼
-Spring Boot REST API
-   │
-   ▼
-Service Layer
-   │
-   ▼
-Repository Layer
-   │
-   ▼
-MySQL Database
+src
+├── main
+│   ├── java
+│   │   └── com.musicplayer
+│   │       ├── config
+│   │       ├── controller
+│   │       ├── entity
+│   │       ├── exception
+│   │       ├── repository
+│   │       └── service
+│   │           └── impl
+│   │
+│   └── resources
+│       ├── static
+│       │   ├── images
+│       │   ├── songs
+│       │   ├── app.js
+│       │   └── style.css
+│       │
+│       ├── templates
+│       │   └── index.html
+│       │
+│       ├── application.properties
+│       └── application-local.properties
+│
+└── pom.xml
