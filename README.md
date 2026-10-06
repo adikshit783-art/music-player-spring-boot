@@ -1,85 +1,100 @@
 # 🎵 Music Player - Spring Boot
 
-A full-stack web-based music player application built using Java Spring Boot, Spring Data JPA, MySQL, HTML, CSS, and JavaScript.
+A full-stack web-based music player application built using **Java, Spring Boot, Spring Data JPA, MySQL, HTML, CSS, and JavaScript**.
+
+The application provides a simple music-player interface where users can browse songs, search for songs, play/pause music, control volume, and navigate between songs.
 
 ## 🚀 Live Demo
 
-👉 [Open Music Player](https://music-player-spring-boot-production.up.railway.app)
+👉 **[Open Music Player](https://music-player-spring-boot-production.up.railway.app)**
+
+---
 
 ## 📌 About the Project
 
-Music Player is a full-stack web application that allows users to browse songs, search for songs, and play music through a simple and responsive web interface.
+This project is a full-stack music player application developed using **Spring Boot** for the backend and **HTML, CSS, and JavaScript** for the frontend.
 
-The backend is developed using Spring Boot and provides REST APIs for managing and retrieving songs. Spring Data JPA and Hibernate are used for database operations, while MySQL is used to store song information.
+The backend provides REST APIs for retrieving and searching songs. **Spring Data JPA and Hibernate** are used for database operations, while **MySQL** stores the song information.
 
-The frontend uses HTML, CSS, and JavaScript to communicate with the backend APIs and provide the music player interface.
+The application is deployed on **Railway**, making it accessible through a public URL.
+
+---
 
 ## ✨ Features
 
 - 🎵 Browse available songs
-- ▶️ Play and pause songs
+- ▶️ Play and pause music
 - ⏮️ Previous song
 - ⏭️ Next song
 - 🔊 Volume control
 - 🔍 Search songs
-- 🖼️ Song cover images
+- 🖼️ Song cover image
 - 🎶 Audio playback
 - 💾 MySQL database integration
-- 🌐 REST API based backend
-- ☁️ Deployed on Railway
+- 🔗 REST API integration
+- ⚠️ Custom exception handling
+- 🌐 Responsive web interface
+- ☁️ Railway deployment
+
+---
 
 ## 🛠️ Technologies Used
 
 ### Backend
 
-- Java
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- REST API
-- Maven
+- **Java**
+- **Spring Boot**
+- **Spring Data JPA**
+- **Hibernate**
+- **REST API**
+- **Maven**
 
 ### Frontend
 
-- HTML
-- CSS
-- JavaScript
+- **HTML5**
+- **CSS3**
+- **JavaScript**
 
 ### Database
 
-- MySQL
+- **MySQL**
 
-### Deployment
+### Deployment & Version Control
 
-- Railway
-- GitHub
+- **Git**
+- **GitHub**
+- **Railway**
 
-## 🏗️ Project Architecture
+---
+
+## 🏗️ Application Architecture
 
 ```text
-src
-├── main
-│   ├── java
-│   │   └── com.musicplayer
-│   │       ├── config
-│   │       ├── controller
-│   │       ├── entity
-│   │       ├── exception
-│   │       ├── repository
-│   │       └── service
-│   │           └── impl
-│   │
-│   └── resources
-│       ├── static
-│       │   ├── images
-│       │   ├── songs
-│       │   ├── app.js
-│       │   └── style.css
-│       │
-│       ├── templates
-│       │   └── index.html
-│       │
-│       ├── application.properties
-│       └── application-local.properties
-│
-└── pom.xml
+                    ┌─────────────────────┐
+                    │      Frontend       │
+                    │ HTML / CSS / JS     │
+                    └──────────┬──────────┘
+                               │
+                               │ HTTP Requests
+                               ▼
+                    ┌─────────────────────┐
+                    │    Spring Boot      │
+                    │    REST Controller  │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    Service Layer    │
+                    │ Business Logic      │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │  Repository Layer   │
+                    │   Spring Data JPA   │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    MySQL Database   │
+                    └─────────────────────┘
